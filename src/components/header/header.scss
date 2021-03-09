@@ -6,35 +6,6 @@ header {
   position: relative;
 }
 
-h1 {
-  width: 200px;
-  padding-top: 10px;
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px;
-  color: #FFF;
-
-  span {
-    display: block;
-    text-align: center;
-  }
-
-  span:last-child {
-    color: orange;
-  }
-
-  a {
-    display: block;
-    text-decoration: none;
-    color: #FFF;
-    transition: transform .1s;
-
-    &:hover {
-      transform: scale(1.02);
-    }
-  }
-}
-
-
 .description {
   position: absolute;
   right: 40px;

@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import Logo from './../logo/logo';
 
 import "./../../Normalize.css";
 import "./footer.scss";
@@ -8,7 +9,7 @@ function Footer() {
 
   return (
     <footer>
-      <p>footer</p>
+      <Logo />
     </footer>
   )
 }

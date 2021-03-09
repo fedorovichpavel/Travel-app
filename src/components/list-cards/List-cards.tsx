@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 
 import "./../../Normalize.css";
 import "./List-cards.scss";
@@ -64,7 +63,7 @@ function ListCards() {
       capital: 'Bucharest'
     }
   ];
-  
+
   const countItems:number = listItems.length;
 
   return (

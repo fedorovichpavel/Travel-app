@@ -1,5 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+
+import Logo from './../logo/logo';
 
 import "./../../Normalize.css";
 import "./header.scss";
@@ -11,7 +12,7 @@ function Header() {
 
   return (
     <header>
-      <h1><a href="#"><span>{prefixLogo}</span><span>{logo}</span></a></h1>
+      <Logo />
       <p className="description">{description}</p>
     </header>
   )

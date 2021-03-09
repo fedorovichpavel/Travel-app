@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import WrapTitle from './../wrap-title/wrap-title';
 import ListCards from './../list-cards/List-cards';
 
 import "./../../Normalize.css";
@@ -10,10 +10,7 @@ function Wrap() {
 
   return (
     <div className="wrap">
-      <div className="wrap-description">
-        <p>ready for your</p>
-        <p>next trip?</p>
-      </div>
+      <WrapTitle />
       <ListCards />
     </div>
   )
