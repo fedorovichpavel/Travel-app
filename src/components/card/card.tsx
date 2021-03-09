@@ -5,7 +5,6 @@ import "./../../Normalize.css";
 import "./card.scss";
 
 function Card(props:any) {
-
   let countItems = props.count;
   let listItems = props.items;
 

@@ -14,7 +14,6 @@ type Country = {
 }
 
 function ListCards() {
-
   const listItems:Country[] = [
     {
       id: 0,
@@ -65,6 +64,7 @@ function ListCards() {
       capital: 'Bucharest'
     }
   ];
+  
   const countItems:number = listItems.length;
 
   return (
