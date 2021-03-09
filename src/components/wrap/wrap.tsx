@@ -10,6 +10,8 @@ function Wrap() {
 
   return (
     <div className="wrap">
+      <p>ready for your</p>
+      <p>next trip?</p>
       <ListCards />
     </div>
   )

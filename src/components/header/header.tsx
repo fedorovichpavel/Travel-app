@@ -5,10 +5,14 @@ import "./../../Normalize.css";
 import "./header.scss";
 
 function Header() {
+  const logo:string = 'Adventure';
+  const prefixLogo:string = '- the -';
+  const description:string = 'halcyon days';
 
   return (
     <header>
-      <p>header</p>
+      <h1><a href="#"><span>{prefixLogo}</span><span>{logo}</span></a></h1>
+      <p className="description">{description}</p>
     </header>
   )
 }

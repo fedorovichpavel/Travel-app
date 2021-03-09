@@ -1,0 +1,44 @@
+header {
+  // background: url(https://www.teahub.io/photos/full/214-2148738_beautiful-smoky-mountain-cover-with-fog-wallpaper-.jpg) no-repeat top center;
+  background: url(https://data.1freewallpapers.com/download/sea-surf-aerial-view-rocks-foam.jpg) no-repeat center center;
+  background-size: cover;
+  height: 90vh;
+  position: relative;
+}
+
+h1 {
+  width: 200px;
+  padding-top: 10px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: #FFF;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    transition: transform .1s;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+}
+
+
+.description {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  color: #FFF;
+  letter-spacing: 5px;
+}
