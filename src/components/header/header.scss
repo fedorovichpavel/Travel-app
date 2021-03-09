@@ -2,7 +2,7 @@ header {
   // background: url(https://www.teahub.io/photos/full/214-2148738_beautiful-smoky-mountain-cover-with-fog-wallpaper-.jpg) no-repeat top center;
   background: url(https://data.1freewallpapers.com/download/sea-surf-aerial-view-rocks-foam.jpg) no-repeat center center;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -16,6 +16,10 @@ h1 {
   span {
     display: block;
     text-align: center;
+  }
+
+  span:last-child {
+    color: orange;
   }
 
   a {
