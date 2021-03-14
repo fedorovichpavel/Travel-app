@@ -1,21 +1,19 @@
 import React from 'react';
 
 import Logo from './../logo/logo';
-import { Search } from './../search/search.js';
 
 import "./../../Normalize.css";
-import "./header.scss";
+import "./header-country.scss";
 
-function Header() {
+function HeaderCountry() {
   const description:string = 'halcyon days';
 
   return (
-    <header>
+    <header className="country">
       <Logo />
-      <Search />
       <p className="description">{description}</p>
     </header>
   )
 }
 
-export default Header;
+export default HeaderCountry;

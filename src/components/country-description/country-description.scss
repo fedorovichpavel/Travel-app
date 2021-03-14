@@ -1,0 +1,28 @@
+.wrap-country-description {
+  font-family: 'Poiret One', cursive;
+  font-size: 26px;
+  line-height: 1.5;
+
+  .wrap-country-title {
+    padding: 50px;
+    display: flex;
+  }
+
+  .wrap-country-name {
+    width: 60%;
+  }
+
+  .wrap-country-title-img {
+    width: 40%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .wrap-country-info {
+    padding: 0 50px 50px 50px;
+  }
+
+
+}
