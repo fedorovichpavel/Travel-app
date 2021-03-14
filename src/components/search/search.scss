@@ -42,6 +42,10 @@
   padding-right: 10px;
 }
 
-.hidden {
-  display: none;
+.item-country div.hidden {
+  // display: none;
+  transform: scale(0);
+  width: 0;
+  height: 0;
+  transition: all .5s;
 }

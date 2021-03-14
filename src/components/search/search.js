@@ -49,6 +49,7 @@ export class Search extends React.Component {
           let parent = countries[i].parentElement.parentElement.parentElement.parentElement;
           if(parent.classList.contains('hidden')) {
             parent.classList.remove('hidden');
+            parent.style.transition = "all .5s";
           }
         }
       }
