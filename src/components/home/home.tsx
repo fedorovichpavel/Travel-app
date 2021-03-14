@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from './../header/header';
 import Wrap from './../wrap/wrap';
 
 import "./../../Normalize.css";
@@ -9,7 +10,7 @@ function Home() {
 
   return (
     <div>
-    <p>home page</p>
+      <Header />
       <Wrap />
     </div>
   )

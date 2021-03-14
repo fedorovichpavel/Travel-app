@@ -9,7 +9,7 @@ function Card(props:any) {
 
   listItems = listItems.map((item:any, i:any) =>
     <div key={i.toString()} className={`item-${item.id} item`} data-country={item.id}>
-      <a href="#">
+      <a href="/country ">
         <div className="wrap-country">
           <div className="country">
             <div className="country-img">

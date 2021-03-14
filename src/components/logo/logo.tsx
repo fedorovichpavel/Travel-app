@@ -8,7 +8,7 @@ function Logo() {
   const prefixLogo:string = '- the -';
 
   return (
-    <h1><a href="#"><span>{prefixLogo}</span><span>{logo}</span></a></h1>
+    <h1><a href="/travel-app"><span>{prefixLogo}</span><span>{logo}</span></a></h1>
   )
 }
 
