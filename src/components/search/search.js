@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Toolbar from './../toolbar/toolbar';
+
 import "./../../Normalize.css";
 import "./search.scss";
 
@@ -57,7 +59,7 @@ export class Search extends React.Component {
     this.res = event.target.value;
     console.log(this.res);
     //можно живой поиск
-    // this.resultSearch();
+    this.resultSearch();
   }
 
 
@@ -74,7 +76,7 @@ export class Search extends React.Component {
           onInput={this.itemsSearch}
         />
         <button className="reset" onClick={this.resetSearch}>x</button>
-        <button onClick={this.resultSearch}>search</button>
+        <Toolbar />
       </div>
 		);
 	}

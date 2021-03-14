@@ -9,8 +9,8 @@ function CountryDescription() {
     <div className="wrap-country-description">
       <div className="wrap-country-title">
         <div className="wrap-country-name">
-          <h2>NAME</h2>
-          <h2>Capital</h2>
+          <h2>Greece</h2>
+          <h2>Athens</h2>
         </div>
         <div className="wrap-country-title-img">
           <img src="https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg" alt="" />
