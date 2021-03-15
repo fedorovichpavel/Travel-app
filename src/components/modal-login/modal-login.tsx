@@ -1,14 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context/context';
 
 import "./../../Normalize.css";
 import "./modal-login.scss";
 
-function ModalLogin() {
+interface ModalLoginProps {
+  visability: Boolean
+}
+
+const ModalLogin:React.FunctionComponent<ModalLoginProps>  = ({visability}:ModalLoginProps)=> {
+  const {changeModal} = useContext(Context);
   return (
-    <div className="modal modal-hidden">
+    <div className={visability ? "modal" : "modal modal-hidden"}>
       <div className="wrap-modal">
-        <button className="reset">x</button>
-        <form method='post' /*action="https://rs-react.herokuapp.com/auth/login"*/>
+        <button className="reset" onClick={() => changeModal('login')}>x</button>
+        <form onSubmit={(e) => e.preventDefault()}/*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/login"*/>
           <div className="login">
             <label>login: </label><input type="text" name="email" />
           </div>
@@ -18,7 +24,7 @@ function ModalLogin() {
           <div className="buttons">
             <button className="ok">ok</button>
             <span> | </span>
-            <button className="registration">registration</button>
+            <button className="registration" onClick={() => (changeModal('login'), changeModal('registration'))}>registration</button>
           </div>
         </form>
       </div>

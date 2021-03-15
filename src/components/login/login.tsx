@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context/context';
 
 import "./../../Normalize.css";
 import "./login.scss";
 
 function Login() {
+  const {changeModal} = useContext(Context);
   return (
     <div className="login">
-      <button>LOG IN</button>
+      <button onClick={()=>changeModal('login')}>LOG IN</button>
     </div>
   )
 }

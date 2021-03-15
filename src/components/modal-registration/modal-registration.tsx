@@ -1,14 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context/context';
 
 import "./../../Normalize.css";
 import "./modal-registration.scss";
 
-function ModalRegistration() {
+interface ModalRegistrationProps {
+  visability: Boolean
+}
+
+const ModalRegistration:React.FunctionComponent<ModalRegistrationProps> = ({visability}) => {
+
+  const {changeModal} = useContext(Context);
+
   return (
-    <div className="modal modal-hidden">
+    <div className={visability ? "modal-registration" : "modal-registration modal-registration-hidden"}>
       <div className="wrap-modal">
-        <button className="reset">x</button>
-        <form method='post' /*action="https://rs-react.herokuapp.com/auth/registration"*/>
+        <button className="reset" onClick={() => (changeModal('registration'))}>x</button>
+        <form /*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/registration"*/>
           <div className="login">
             <label>login: </label><input type="text" name="nickName" />
           </div>

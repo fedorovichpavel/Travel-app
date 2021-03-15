@@ -37,7 +37,7 @@ export class Search extends React.Component {
     let listDataCapital = Array.from(document.querySelectorAll('.country h5'))
                         .map((item) => item.textContent);
     let listData = listDataCountry.concat(listDataCapital);
-    let filter = listData.filter((item) => item.includes(this.res));
+    let filter = listData.filter((item) => item.toLowerCase().includes(this.res.toLowerCase()));
 
     filter.map((item) => {
       const countries = document.querySelectorAll('.country h4');
