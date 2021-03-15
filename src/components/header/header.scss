@@ -1,0 +1,19 @@
+header {
+  // background: url(https://www.teahub.io/photos/full/214-2148738_beautiful-smoky-mountain-cover-with-fog-wallpaper-.jpg) no-repeat top center;
+  background: url(https://data.1freewallpapers.com/download/sea-surf-aerial-view-rocks-foam.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.description {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  color: #FFF;
+  letter-spacing: 5px;
+}
