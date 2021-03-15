@@ -1,0 +1,11 @@
+.lang {
+  display: flex;
+
+  select {
+    padding: 0 10px;
+  }
+
+  select:focus {
+    outline: none;
+  }
+}
