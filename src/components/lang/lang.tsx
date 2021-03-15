@@ -7,9 +7,9 @@ function Lang() {
   return (
     <div className="lang">
       <select>
-        <option>EN</option>
-        <option>RU</option>
-        <option>FR</option>
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="fr">FR</option>
       </select>
     </div>
   )
