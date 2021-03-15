@@ -1,76 +1,45 @@
-import React from 'react';
-
+import React, { useEffect, useState } from "react";
 import "./../../Normalize.css";
 import "./List-cards.scss";
-
-import Card from './../card/card';
-
-type Country = {
-  id: number,
-  urlImg: string,
-  country: string,
-  capital: string
-}
+import Card from "./../card/card";
+import Loader from "../loader/Loader";
+import { Country } from "../../interfaces/Country";
+import axios from "axios";
+import { URL } from "../../Constants";
 
 function ListCards() {
-  const listItems:Country[] = [
-    {
-      id: 0,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Italy',
-      capital: 'Rome'
-    },
-    {
-      id: 1,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Greece',
-      capital: 'Athens'
-    },
-    {
-      id: 2,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'France',
-      capital: 'Paris'
-    },
-    {
-      id: 3,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Germany',
-      capital: 'Berlin'
-    },
-    {
-      id: 4,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Finland',
-      capital: 'Helsinki'
-    },
-    {
-      id: 5,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Denmark',
-      capital: 'Copenhagen'
-    },
-    {
-      id: 6,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Belgium',
-      capital: 'Brussels'
-    },
-    {
-      id: 7,
-      urlImg: 'https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg',
-      country: 'Romania',
-      capital: 'Bucharest'
-    }
-  ];
+  const [country, setCountry] = useState<Country[]>([]);
 
-  const countItems:number = listItems.length;
+  useEffect(() => {
+    axios.get(URL).then((response) => {
+      const arr: any[] = [];
+      if (response.data) {
+        for (let index = 0; index < response.data.length; index++) {
+          arr.push({
+            _id: index,
+            img: response.data[index].img,
+            country: { ...response.data[index].country },
+            capital: { ...response.data[index].capital },
+          });
+        }
+
+        setCountry(arr);
+      }
+
+      /* const country = response.data;
+      setCountry(country); */
+    });
+  }, [setCountry]);
 
   return (
     <div className="wrap-list-countries">
-      <Card count={countItems} items={listItems}/>
+      {country.length !== 0 ? (
+        <Card count={country.length} items={country} />
+      ) : (
+        <Loader />
+      )}
     </div>
-  )
+  );
 }
 
 export default ListCards;

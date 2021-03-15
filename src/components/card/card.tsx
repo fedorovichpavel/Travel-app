@@ -13,10 +13,10 @@ function Card(props:any) {
         <div className="wrap-country">
           <div className="country">
             <div className="country-img">
-              <img src={item.urlImg} alt="" />
+              <img src={item.img} alt="" />
             </div>
-            <h4>{item.country}</h4>
-            <h5>{item.capital}</h5>
+            <h4>{item.country.en}</h4>
+            <h5>{item.capital.en}</h5>
           </div>
         </div>
       </a>
