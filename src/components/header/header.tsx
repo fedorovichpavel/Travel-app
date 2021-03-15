@@ -14,6 +14,7 @@ function Header() {
       <Logo />
       <Search />
       <p className="description">{description}</p>
+
     </header>
   )
 }
