@@ -9,6 +9,7 @@ import Home from './../home/home';
 import Country from './../country/country';
 import Footer from './../footer/footer';
 import ModalLogin from './../modal-login/modal-login';
+import ModalRegistration from './../modal-registration/modal-registration';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/country"component={Country}/>
         <Footer />
         <ModalLogin />
+        <ModalRegistration />
       </div>
     </BrowserRouter>
   );
