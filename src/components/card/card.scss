@@ -111,3 +111,12 @@
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .item-country {
+    .country-img {
+      height: 150px;;
+      overflow: hidden;
+    }
+  }
+}

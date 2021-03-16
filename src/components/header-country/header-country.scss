@@ -7,3 +7,38 @@ header.country {
 .country .description {
   font-size: 30px;
 }
+
+.toolbar-country {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  header.country {
+    border-top: 0;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header.country {
+    border-top: 0;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  header.country {
+    border-top: 0;
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  header.country .description {
+    font-size: 20px;
+  }
+}

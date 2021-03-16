@@ -12,4 +12,10 @@ header .login {
     top: 90px;
     right: 0;
   }
+
+  header.country .login {
+    position: static;
+    top: 0;
+    right: 0;
+  }
 }
