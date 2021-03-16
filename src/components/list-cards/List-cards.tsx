@@ -34,7 +34,7 @@ function ListCards() {
   return (
     <div className="wrap-list-countries">
       {country.length !== 0 ? (
-        <Card count={country.length} items={country} />
+        <Card items={country} />
       ) : (
         <Loader />
       )}
