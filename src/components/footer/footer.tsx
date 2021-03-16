@@ -19,6 +19,7 @@ function Footer() {
           <li><a href="https://github.com/mig-marina">Marina Migacheva</a></li>
           <li><a href="https://github.com/reactplanner">Oleg Borodin</a></li>
           <li><p>2021</p></li>
+          <li className="link-school"><a href="https://rs.school/react/" target="_blank" title="rs-school"></a></li>
         </ul>
       </div>
     </footer>
