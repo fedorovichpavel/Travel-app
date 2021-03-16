@@ -1,10 +1,14 @@
+// @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
 .wrap-country-description {
+  // background: url(https://img5.goodfon.ru/wallpaper/nbig/a/63/abstract-colorful-papercut-design-vector-abstraktsiia-linii.jpg) center 200% no-repeat;
+  // background-size: 100%;
   font-family: 'Poiret One', cursive;
   font-size: 26px;
   line-height: 1.5;
 
   .wrap-country-title {
-    padding: 50px;
+    padding: 80px 50px;
     display: flex;
   }
 
@@ -41,7 +45,67 @@
 
   .wrap-country-info {
     padding-right: 40px;
-    font-size: 20px;
+    // font-size: 20px;
+
+    font-family: 'Shippori Mincho', serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  .wrap-country-map {
+    // padding: 50px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #010f11;
+
+    .map {
+      width: 60%;
+
+      .wrap-map {
+        padding: 40px;
+      }
+    }
+
+    .map-info {
+      width: 40%;
+
+      h3 {
+        margin: 0;
+        padding: 0 20px;
+        font-size: 60px;
+        color: #FFF;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+      }
+
+      h4 {
+        margin: 0;
+        padding: 0 20px;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        color: #FFA500;
+        font-weight: normal;
+        // font-family: 'Cedarville Cursive', cursive;
+        font-size: 30px;
+      }
+
+      .map-info-one {
+        // padding-right: 30px;
+        padding-bottom: 10px;
+        text-align: right;
+      }
+      .map-info-two {
+        text-align: right;
+        padding-bottom: 10px;
+      }
+      .map-info-three {
+        // padding-left: 40px;
+        text-align: right;
+      }
+    }
   }
 
 
