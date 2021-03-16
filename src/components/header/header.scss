@@ -1,5 +1,4 @@
 header {
-  // background: url(https://www.teahub.io/photos/full/214-2148738_beautiful-smoky-mountain-cover-with-fog-wallpaper-.jpg) no-repeat top center;
   background: url(../../assets/background-header.jpg) no-repeat center center;
   background-size: cover;
   height: 100vh;
@@ -16,4 +15,25 @@ header {
   font-size: 50px;
   color: #FFF;
   letter-spacing: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    border-top: 78px solid#032a2a;
+    height: calc(100vh - 78px);
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header {
+    border-top: 94px solid#032a2a;
+    height: calc(100vh - 94px);
+  }
+}
+
+@media screen and (max-width: 408px) {
+  header {
+    border-top: 78px solid#032a2a;
+    height: calc(100vh - 78px);
+  }
 }

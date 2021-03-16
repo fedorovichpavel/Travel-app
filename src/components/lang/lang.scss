@@ -9,3 +9,18 @@
     outline: none;
   }
 }
+
+@media screen and (max-width: 470px) {
+  .lang select {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 408px) {
+  .lang {
+    width: 85.75px;
+    position: absolute;
+    top: 130px;
+    right: 0;
+  }
+}

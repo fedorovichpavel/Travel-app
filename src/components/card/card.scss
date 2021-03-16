@@ -28,7 +28,6 @@
     transition: border-color .3s;
 
     &:hover {
-      // border-color: #02858F;
       border-color: #3ec8b4;
     }
   }
@@ -47,17 +46,50 @@
   }
 
   .country-img {
+    height: 50vh;
     overflow: hidden;
   }
 
   .country-img img {
-    max-width: 100%;
+    max-width: 150%;
     filter: grayscale(50%);
     transition: transform .3s;
 
     &:hover {
       transform: scale(1.2);
       filter: grayscale(10%);
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .item-country {
+    .country-img img {
+      max-width: 180%;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .item-country {
+
+    .item {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+
+    .country-img img {
+      max-width: 150%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item-country {
+
+    .item {
+      width: 100%;
+      margin-bottom: 40px;
     }
   }
 }

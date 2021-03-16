@@ -1,5 +1,47 @@
 footer {
-  padding: 50px;
-  // background-color: #033c3f;
+  padding: 20px;
   background-color: #010f11;
+  display: flex;
+  align-items: center;
+
+  .col-left,
+  .col-right {
+    flex: 1;
+  }
+
+  .col-right {
+    font-family: 'Poiret One', cursive;
+    text-align: right;
+    color: #FFF;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    li {
+      padding: 5px 0;
+
+      img {
+        width: 60px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #FFF;
+
+      &:hover {
+        color: #FFA500;
+      }
+    }
+
+    .link-school a {
+      display: inline-block;
+      background: url("../../assets/rs.svg") no-repeat center center;
+      background-size: 70px;
+      height: 50px;
+      width: 70px;
+    }
+  }
 }
