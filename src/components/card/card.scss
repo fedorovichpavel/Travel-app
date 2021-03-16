@@ -28,7 +28,6 @@
     transition: border-color .3s;
 
     &:hover {
-      // border-color: #02858F;
       border-color: #3ec8b4;
     }
   }
@@ -47,11 +46,12 @@
   }
 
   .country-img {
+    height: 50vh;
     overflow: hidden;
   }
 
   .country-img img {
-    max-width: 100%;
+    max-width: 150%;
     filter: grayscale(50%);
     transition: transform .3s;
 

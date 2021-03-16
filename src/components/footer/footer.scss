@@ -2,4 +2,26 @@ footer {
   padding: 50px;
   // background-color: #033c3f;
   background-color: #010f11;
+  display: flex;
+
+  .col-left,
+  .col-right {
+    flex: 1;
+  }
+
+  .col-right {
+    font-family: 'Poiret One', cursive;
+    text-align: right;
+    color: #FFF;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #FFF;
+    }
+  }
 }
