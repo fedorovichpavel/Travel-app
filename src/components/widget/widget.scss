@@ -1,9 +1,88 @@
+@import '../../assets/owfont-regular.css';
+
 .widget {
   width: 40%;
-  text-align: center;
-
+  background: #26b5b394;
+    border-radius: 3rem 3rem 0 3rem;
+    box-shadow: inset 2px 2px 5px rgba(32,30,29,0.5), 1px 1px 5px rgb(0,0,0);
   .wrap-widget {
     padding: 40px;
   }
+  .date-conteiner {
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 2px 3px #000;
+  }
   
+}
+
+.weather {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 2px 3px #000;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.weather-city {
+  width: auto;
+  height: 160px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5rem;
+}
+
+.weather-temp-icon {
+  display: flex;
+}
+
+.weather-info {
+  padding-left: 20px;
+  width: auto;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.temp {
+  display: flex;
+}
+
+.owf {
+  font-size: 4rem !important;
+}
+
+.temperature {
+  font-size: 3rem;
+  padding: 0px 0px 5px 10px;
+}
+
+.city {
+  font-size: 2.5rem;
+}
+
+.exchange {
+  padding: 1rem;
+    background: rgba(165, 162, 162, 0.5);
+    border-radius: 5px;
+    text-shadow: 1px 0 1px #fff, 0 1px 1px #fff, -1px 0 1px #fff, 0 2px 3px #fff;
+}
+
+.exchange-title {
+  margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.curr {
+    font-size: 2rem;
+    padding: 1rem 0 0 1rem;
 }
