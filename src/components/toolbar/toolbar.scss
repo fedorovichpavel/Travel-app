@@ -1,12 +1,13 @@
 .toolbar {
-  // position: absolute;
-  // top: 0;
-  // right: 286px;
-  // left: 0;
-  // padding: 20px;
   display: flex;
   justify-content: flex-end;
   background-color: rgba(3, 60, 63, .8);
   font-family: 'Poiret One', cursive;
   font-size: 20px;
+}
+
+@media screen and (max-width: 470px) {
+  .toolbar {
+    flex-direction: column;
+  }
 }

@@ -61,3 +61,35 @@
     }
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .item-country {
+    .country-img img {
+      max-width: 180%;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .item-country {
+
+    .item {
+      width: 50%;
+      margin-bottom: 40px;
+    }
+
+    .country-img img {
+      max-width: 150%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .item-country {
+
+    .item {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+}
