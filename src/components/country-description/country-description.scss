@@ -1,8 +1,6 @@
-// @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap');
+
 .wrap-country-description {
-  // background: url(https://img5.goodfon.ru/wallpaper/nbig/a/63/abstract-colorful-papercut-design-vector-abstraktsiia-linii.jpg) center 200% no-repeat;
-  // background-size: 100%;
   font-family: 'Poiret One', cursive;
   font-size: 26px;
   line-height: 1.5;
@@ -45,7 +43,6 @@
 
   .wrap-country-info {
     padding-right: 40px;
-    // font-size: 20px;
 
     font-family: 'Shippori Mincho', serif;
     font-size: 18px;
@@ -54,7 +51,6 @@
   }
 
   .wrap-country-map {
-    // padding: 50px;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -88,12 +84,10 @@
         letter-spacing: 10px;
         color: #FFA500;
         font-weight: normal;
-        // font-family: 'Cedarville Cursive', cursive;
         font-size: 30px;
       }
 
       .map-info-one {
-        // padding-right: 30px;
         padding-bottom: 10px;
         text-align: right;
       }
@@ -102,11 +96,111 @@
         padding-bottom: 10px;
       }
       .map-info-three {
-        // padding-left: 40px;
         text-align: right;
       }
     }
   }
+}
 
+@media screen and (max-width: 850px) {
+  .wrap-country-description {
 
+    .wrap-country-title {
+      padding: 80px 50px;
+      flex-direction: column;
+    }
+
+    .wrap-country-name {
+      width: 100%;
+    }
+
+    .wrap-country-info {
+      padding-right: 0;
+    }
+
+    .wrap-country-title-img {
+      width: 100%;
+    }
+
+    .wrap-country-map .map-info h3 {
+      font-size: 40px;
+    }
+
+    .wrap-country-map .map-info h4 {
+      font-size: 26px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .wrap-country-description {
+
+    .wrap-country-map {
+      flex-direction: column;
+
+      .map {
+        width: 90%;
+
+        .wrap-map {
+          padding: 5px;
+        }
+      }
+
+      .map-info {
+        width: 100%;
+
+        h3 {
+          font-size: 30px;
+        }
+
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 405px) {
+  .wrap-country-description {
+
+    .wrap-country-map {
+      flex-direction: column;
+
+      .map-info {
+
+        h3 {
+          font-size: 20px;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .wrap-country-description {
+
+    .wrap-country-map {
+      flex-direction: column;
+
+      .map-info {
+
+        h3 {
+          font-size: 16px;
+        }
+
+        h4 {
+          display: none;
+        }
+      }
+    }
+
+  }
 }

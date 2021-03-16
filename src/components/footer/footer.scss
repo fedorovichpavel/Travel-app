@@ -45,3 +45,20 @@ footer {
     }
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  footer {
+    .col-left {
+      flex: 1;
+    }
+    .col-right {
+      flex: 2;
+    }
+
+    h1 {
+      width: auto;
+      font-size: 30px;
+    }
+  }
+}

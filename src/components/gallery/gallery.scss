@@ -3,7 +3,6 @@
 
   font-family: 'Poiret One', cursive;
 
-
   .wrap-gallery {
     padding: 40px;
   }
@@ -38,8 +37,6 @@
       left: 100%;
       width: 50%;
       height: 100%;
-      // background-color: rgba(3, 60, 63, .95);
-      // background-color: #010f11;
       background-color: rgba(1, 15, 17, .9);
       transition: left .3s;
 
@@ -54,14 +51,12 @@
     }
 
     &:hover {
-      // cursor: pointer;
 
       .item-content {
         left: 50%;
       }
 
       img {
-        // transform: scale(1.2);
         transform: translateX(-50px) scale(1.2);
       }
     }
