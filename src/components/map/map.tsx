@@ -3,8 +3,7 @@ import { useSelector } from "react-redux";
 import { State } from "../../redux/stateInterface";
 import "./map.scss";
 import MapboxLanguage from "./mapLang";
-
-const mapboxgl = require("mapbox-gl/dist/mapbox-gl.js");
+import mapboxgl from "mapbox-gl";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiZmVkb3JvdmljaHBhdmVsIiwiYSI6ImNraW5lcTkzMzBtMW8ycm81cTd6N3N3aDIifQ.botvkeUgOwWBdkRdCIwuWg";
@@ -22,7 +21,7 @@ const Map = (props: any) => {
     const map = new mapboxgl.Map({
       container: "map",
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [props.lat, props.lon], //координаты страны или города
+      center: [props.lat, props.lon],
       zoom: 3,
     });
     map.addControl(new MapboxLanguage({ defaultLanguage: lang }));

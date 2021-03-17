@@ -8,9 +8,6 @@ import Exchange from './exchange';
 
 
 function Widget(props:any) {
-    
-
-console.log(props)
 
   return (
     <div className="widget">

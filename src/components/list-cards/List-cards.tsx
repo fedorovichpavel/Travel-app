@@ -11,7 +11,6 @@ function ListCards() {
   const [country, setCountry] = useState<Country[]>([]);
 
   useEffect(() => {
-    console.log("ZNNN");
     axios.get(URL).then((response) => {
       const arr: any[] = [];
       if (response.data) {
@@ -23,8 +22,6 @@ function ListCards() {
             capital: { ...response.data[index].capital },
           });
         }
-        console.log(arr);
-
         setCountry(arr);
       }
     });
