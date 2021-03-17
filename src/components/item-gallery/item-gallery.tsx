@@ -15,11 +15,42 @@ function ItemGallery(props: any) {
 
     function showModal(e: any) {
       let target = e.target;
-      while(target.tagName !== 'LI') {
-        target = target.parentElement;
+      if(target.tagName !== 'BUTTON') {
+        while(target.tagName !== 'LI') {
+          target = target.parentElement;
+        }
+        target.classList.toggle('show');
+        document.body.classList.toggle('visible');
       }
-      target.classList.toggle('show');
-      document.body.classList.toggle('visible');
+
+    }
+
+    function showPrev(e: any) {
+      let target = e.target;
+      let item = target.parentElement.parentElement;
+      item.classList.remove('show');
+
+      let itemPrev = item.previousElementSibling;
+      if(itemPrev) {
+        itemPrev.classList.add('show');
+      } else {
+        itemPrev = item.parentElement.lastElementChild;
+        itemPrev.classList.add('show');
+      }
+    }
+
+    function showNext(e: any) {
+      let target = e.target;
+      let item = target.parentElement.parentElement;
+      item.classList.remove('show');
+
+      let itemNext = item.nextElementSibling;
+      if(itemNext) {
+        itemNext.classList.add('show');
+      } else {
+        itemNext = item.parentElement.children[0];
+        itemNext.classList.add('show');
+      }
     }
 
     return (
@@ -30,6 +61,8 @@ function ItemGallery(props: any) {
         onClick = {showModal}
       >
         <div className="wrap-show">
+          <button className="prev" onClick = {showPrev}>prev</button>
+          <button className="next" onClick = {showNext}>next</button>
           <div className="wrap-item">
             <img src={item.src} alt="" />
             <div className="item-content">
