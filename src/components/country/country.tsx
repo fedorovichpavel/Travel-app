@@ -22,7 +22,7 @@ function Country() {
     window.scrollTo(0, 0);
     axios.post(URL + "country", { country: country }).then(function (response) {
       console.log(response.data);
-      
+
       setResponse(response.data);
     });
   }, [setResponse]);
@@ -44,9 +44,9 @@ function Country() {
           lon={response.latLon.lon}
           iso={response.iso}
         />
-        <Gallery images={response.images}/>
+        <Gallery images={response.images} />
         <div className="country-data-cols">
-          <Video />
+          <Video link={response.video} />
           <Widget />
         </div>
       </div>
