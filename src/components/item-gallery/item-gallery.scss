@@ -2,6 +2,19 @@
   overflow: hidden;
 }
 
+.show .wrap-show {
+  animation: wow .5s;
+}
+
+@keyframes wow {
+    from {
+      transform: scale(.5);
+    }
+    to {
+      transform: scale(1);;
+    }
+}
+
 .prev,
 .next {
   padding: 10px;
