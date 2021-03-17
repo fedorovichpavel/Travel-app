@@ -2,6 +2,42 @@
   overflow: hidden;
 }
 
+.prev,
+.next {
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.next {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.prev {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+.show .prev,
+.show .next {
+  display: block;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(1, 15, 17, 0.9);
+  color: #FFF;
+  cursor: pointer;
+}
+
+.prev:focus,
+.next:focus {
+  outline: none;
+}
+
 .gallery li.show {
   position: fixed;
   top: 0;
