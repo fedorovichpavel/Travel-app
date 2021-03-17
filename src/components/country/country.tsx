@@ -44,7 +44,7 @@ function Country() {
           lon={response.latLon.lon}
           iso={response.iso}
         />
-        <Gallery />
+        <Gallery images={response.images}/>
         <div className="country-data-cols">
           <Video />
           <Widget />
