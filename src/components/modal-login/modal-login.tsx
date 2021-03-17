@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import {Context} from '../context/context';
+import axios from "axios";
 
 import "./../../Normalize.css";
 import "./modal-login.scss";
@@ -10,11 +11,24 @@ interface ModalLoginProps {
 
 const ModalLogin:React.FunctionComponent<ModalLoginProps>  = ({visability}:ModalLoginProps)=> {
   const {changeModal} = useContext(Context);
+
+  function loginUser(e: any) {
+    console.log(e);
+      axios({
+         method: 'post',
+         url: 'https://rs-react.herokuapp.com/auth/login',
+         data: {
+           email: e.target[0].value,
+           password: e.target[1].value
+         }
+       }).then(response => console.log(response.data)); 
+  }
+
   return (
     <div className={visability ? "modal" : "modal modal-hidden"}>
       <div className="wrap-modal">
         <button className="reset" onClick={() => changeModal('login')}>x</button>
-        <form onSubmit={(e) => e.preventDefault()}/*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/login"*/>
+        <form onSubmit={(e) => (e.preventDefault(), loginUser(e))}/*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/login"*/>
           <div className="login">
             <label>login: </label><input type="text" name="email" />
           </div>
