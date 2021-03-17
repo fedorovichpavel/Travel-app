@@ -1,31 +1,35 @@
-import React from 'react';
-import Map from '../map/map';
+import React from "react";
+import { useSelector } from "react-redux";
+import { State } from "../../redux/stateInterface";
+import Map from "../map/map";
 
 import "./../../Normalize.css";
 import "./country-description.scss";
 
-function CountryDescription() {
+function CountryDescription(props: any) {
+  const country = useSelector((state: State) => state.country.name);
+  const lang = useSelector((state: State) => state.lang.lang);
+  const capital = useSelector((state: State) => state.country.capital);
+  const image = useSelector((state: State) => state.country.image);
 
   return (
     <div className="wrap-country-description">
       <div className="wrap-country-title">
         <div className="wrap-country-name">
-          <h2 className="country">Greece</h2>
-          <h2 className="capital">Athens</h2>
-            <div className="wrap-country-info">
-              <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.</p>
-            </div>
+          <h2 className="country">{country ? country[lang] : ""}</h2>
+          <h2 className="capital">{capital ? capital[lang] : ""}</h2>
+          <div className="wrap-country-info">
+            <p>{props.description[lang]}</p>
+          </div>
         </div>
         <div className="wrap-country-title-img">
-
-          <img src="https://cms.enjourney.ru/upload/Jana/Italia/itpl.jpg" alt="" />
+          <img src={image ? image : ""} alt={country ? country[lang] : ""} />
         </div>
       </div>
       <div className="wrap-country-map">
-
         <div className="map">
           <div className="wrap-map">
-            <Map />
+            <Map lat={props.lon} lon={props.lat} iso={props.iso} />
           </div>
         </div>
         <div className="map-info">
@@ -36,7 +40,7 @@ function CountryDescription() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default CountryDescription;
