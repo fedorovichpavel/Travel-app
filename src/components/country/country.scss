@@ -1,3 +1,9 @@
 .country-data-cols {
   display: flex;
 }
+
+@media screen and (max-width: 1000px) {
+  .country-data-cols {
+    flex-direction: column;
+  }
+}
