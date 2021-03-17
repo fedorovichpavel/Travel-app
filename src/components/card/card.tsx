@@ -1,13 +1,16 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { changeCountry } from "../../redux/action/countryAction";
 import { State } from "../../redux/stateInterface";
 
 import "./../../Normalize.css";
 import "./card.scss";
 
 function Card(props: any) {
-  const lang:string = useSelector((state: State) => state.lang.lang);
-  
+  const lang: string = useSelector((state: State) => state.lang.lang);
+  const dispatch = useDispatch();
+
   let listItems = props.items;
 
   listItems = listItems.map((item: any, i: any) => (
@@ -16,8 +19,13 @@ function Card(props: any) {
       className={`item-${item.id} item`}
       data-country={item.id}
     >
-      <a href="/country">
-        <div className="wrap-country">
+      <Link to="/country">
+        <div
+          className="wrap-country"
+          onClick={() => {
+            dispatch(changeCountry(item.country, item.img, item.capital));
+          }}
+        >
           <div className="country">
             <div className="country-img">
               <img src={item.img} alt="" />
@@ -26,7 +34,7 @@ function Card(props: any) {
             <h5>{item.capital[lang]}</h5>
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   ));
 

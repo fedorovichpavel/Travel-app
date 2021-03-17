@@ -11,6 +11,7 @@ function ListCards() {
   const [country, setCountry] = useState<Country[]>([]);
 
   useEffect(() => {
+    console.log("ZNNN");
     axios.get(URL).then((response) => {
       const arr: any[] = [];
       if (response.data) {
@@ -22,22 +23,16 @@ function ListCards() {
             capital: { ...response.data[index].capital },
           });
         }
+        console.log(arr);
 
         setCountry(arr);
       }
-
-      /* const country = response.data;
-      setCountry(country); */
     });
   }, [setCountry]);
 
   return (
     <div className="wrap-list-countries">
-      {country.length !== 0 ? (
-        <Card items={country} />
-      ) : (
-        <Loader />
-      )}
+      {country.length !== 0 ? <Card items={country} /> : <Loader />}
     </div>
   );
 }
