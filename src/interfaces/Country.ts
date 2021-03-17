@@ -18,5 +18,5 @@ export interface WeatherI {
 }
 
 export interface ExchangeI {
-  rates: object,
+  rates: object
 }
