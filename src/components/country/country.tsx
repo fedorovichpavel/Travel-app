@@ -16,12 +16,12 @@ import Loader from "../loader/Loader";
 
 function Country() {
   const country = useSelector((state: State) => state.country.name?.en);
+  const capital = useSelector((state: State) => state);
   const [response, setResponse] = useState<any | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
     axios.post(URL + "country", { country: country }).then(function (response) {
-      console.log(response.data);
 
       setResponse(response.data);
     });
@@ -47,7 +47,7 @@ function Country() {
         <Gallery images={response.images} />
         <div className="country-data-cols">
           <Video link={response.video} />
-          <Widget />
+          <Widget data={capital} currency={response.currency}/>
         </div>
       </div>
     );

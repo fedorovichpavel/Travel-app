@@ -1,3 +1,5 @@
+import { KeyObject } from "crypto";
+
 export interface Country {
   _id: number;
   img: string;
@@ -12,11 +14,12 @@ export interface objLang {
 }
 
 export interface WeatherI {
-  main: object,
-  weather: Array<object>,
-  wind: object
+  id:string;
+  temp: number;
+  humidity: string;
+  wind:number;
 }
 
 export interface ExchangeI {
-  rates: object
+  rates: any
 }
