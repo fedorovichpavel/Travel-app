@@ -1,9 +1,23 @@
 .video {
   width: 60%;
-  text-align: center;
+  // text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .wrap-video {
     padding: 40px;
   }
+}
 
+@media screen and (max-width: 1000px) {
+  .video {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  div.video {
+    display: none;
+  }
 }
