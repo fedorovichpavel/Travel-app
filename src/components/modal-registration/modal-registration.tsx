@@ -16,7 +16,7 @@ const ModalRegistration:React.FunctionComponent<ModalRegistrationProps> = ({visa
     <div className={visability ? "modal-registration" : "modal-registration modal-registration-hidden"}>
       <div className="wrap-modal">
         <button className="reset" onClick={() => (changeModal('registration'))}>x</button>
-        <form onSubmit={(e) => e.preventDefault()} /*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/registration"*/>
+        <form onSubmit={(e) => e.preventDefault()}/*method='post'*/ /*action="https://rs-react.herokuapp.com/auth/registration"*/>
           <div className="login">
             <label>login: </label><input type="text" name="nickName" />
           </div>
