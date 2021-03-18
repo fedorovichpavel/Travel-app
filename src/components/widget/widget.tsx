@@ -12,7 +12,7 @@ function Widget(props:any) {
   return (
     <div className="widget">
       <div className="wrap-widget">
-        <Time />
+        <Time capital={props.data.country.capital}/>
         <Weather capital={props.data.country.capital}/>
         <Exchange currency={props.currency}/>
       </div>

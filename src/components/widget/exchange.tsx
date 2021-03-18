@@ -6,7 +6,7 @@ import { State } from "../../redux/stateInterface";
 import { ExchangeI } from "../../interfaces/Country";
 
 
-const apiKey = '8f05f38e9ab678b53835461d';
+const apiKey = 'f58a5ca4c71e8b86894a2efc';
 function Usd(props: any) {
  const [ratesUSD, setRatesUSD] = useState<ExchangeI[]>([]);
 
@@ -23,7 +23,7 @@ useEffect(() => {
 }, [setRatesUSD]);
 
 return (
- ratesUSD[0] ? <div className="exchange-usd curr">1 USD -&gt; {ratesUSD[0].rates[props.currency]} {props.currency}</div> : <Loader />
+ (ratesUSD.length !== 0) && (ratesUSD[0].rates !== undefined) ? <div className="exchange-usd curr">1 USD -&gt; {ratesUSD[0].rates[props.currency]} {props.currency}</div> : <Loader />
 )
 }
 
@@ -42,7 +42,7 @@ function Eur(props:any) {
      });
    }, [setRatesEUR]);
 return (
- ratesEUR[0] ? <div className="exchange-eur curr">1 EUR -&gt; {ratesEUR[0].rates[props.currency]} {props.currency}</div> : <Loader />
+ (ratesEUR.length !== 0) && (ratesEUR[0].rates !== undefined) ? <div className="exchange-eur curr">1 EUR -&gt; {ratesEUR[0].rates[props.currency]} {props.currency}</div> : <Loader />
 )
 }
 

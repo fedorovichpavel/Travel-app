@@ -77,14 +77,24 @@ function showMonth(m:any, language:string) {
  return m[language];
 }
 
-function Time() {
+function Time(props: any) {
  const [time, setTime] = useState('');
   const [day, setDay] = useState('');
   const lang:string = useSelector((state: State) => state.lang.lang);
-
+const timeZone:any = {
+    'Athens': '-1',
+    'Minsk': '0',
+    'Paris': '-2',
+    'Berlin': '-2',
+    'Tokyo': '6',
+    'Rome': '-2',
+    'Madrid': '-2',
+    'New_Delhi': '-2'
+}
   useEffect(()=> {
-   let today = new Date(),
-   hour = today.getHours(),
+   let today = new Date();
+   today.setUTCHours(today.getUTCHours() + +timeZone[props.capital.en]);
+   let hour = today.getHours(),
    min = today.getMinutes(),
    sec = today.getSeconds(),
    week = today.getDay(),
